@@ -1,4 +1,5 @@
 import Header from '../components/Header';
+import Sidebar from '../components/Sidebar';
 import './globals.css';
 
 export const metadata = {
@@ -9,9 +10,12 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>
+      <body className="flex flex-col">
         <Header />
-        {children}
+        <div className="flex">
+          <Sidebar />
+          <main className="flex-1 p-4">{children}</main>
+        </div>
       </body>
     </html>
   );

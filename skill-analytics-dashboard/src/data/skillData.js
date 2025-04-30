@@ -2,7 +2,7 @@ export const skillData = [
   {
     id: 1,
     name: 'HTML',
-    icon: '/html-icon.png',
+    icon: '/HTML-icon.png',
     totalQuestions: 15,
     duration: '30 mins',
     submittedDate: '2025-04-25',

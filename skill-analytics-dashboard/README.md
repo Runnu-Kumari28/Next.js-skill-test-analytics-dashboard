@@ -59,7 +59,7 @@ Skill Test Analytics Dashboard is a responsive web application built with Next.j
 ## Setup Instructions
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/your-username/next-js-skill-test-analytics-dashboard.git
+   git clone https://github.com/Runnu-Kumari28/Next.js-skill-test-analytics-dashboard.git
    cd next-js-skill-test-analytics-dashboard
    cd skill-analytics-dashboard 
 

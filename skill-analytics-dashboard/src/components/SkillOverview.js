@@ -28,8 +28,10 @@ const SkillOverview = ({ skill }) => {
 
   return (
     <div className="p-4 border rounded-lg shadow-sm bg-white">
-      <div className="flex items-center">
-        <div className="flex items-center">
+      <h3 className="text-lg font-medium">Skill Overview Section</h3>
+      <div className="flex flex-col lg:flex-row lg:items-center gap-4 lg:gap-0">
+        {/* Icon */}
+        <div className="flex items-center justify-center lg:justify-start flex-shrink-0">
           <Image
             src={skill.icon}
             alt={`${skill.name} Icon`}
@@ -37,28 +39,32 @@ const SkillOverview = ({ skill }) => {
             height={40}
             className="object-contain"
           />
-        </div> 
-        <div className="flex-1"></div>        
+        </div>
+
+        {/* Middle Content */}
         <div className="flex-1 text-center min-w-0">
           <h3 className="text-lg font-medium truncate">Hyper Text Markup Language</h3>
-          <div className="flex gap-2 text-sm text-gray-600 justify-center flex-wrap">
-            <span className="whitespace-nowrap">Questions: {skill.totalQuestions}</span>
-            <span className="whitespace-nowrap">Duration: {skill.duration}</span>
-            <span className="whitespace-nowrap">Submitted: {skill.submittedDate}</span>
+          <div className="flex flex-col lg:flex-row gap-2 lg:gap-1 text-sm text-gray-600 justify-center">
+            <span className="whitespace-nowrap truncate">Questions: {skill.totalQuestions}</span>
+            <span className="whitespace-nowrap truncate">Duration: {skill.duration}</span>
+            <span className="whitespace-nowrap truncate">Submitted: {skill.submittedDate}</span>
           </div>
         </div>
-        <div className="flex-1"></div>
-        <button
-          onClick={() => setIsModalOpen(true)}
-          className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 whitespace-nowrap"
-        >
-          Update
-        </button>
+
+        {/* Button */}
+        <div className="flex justify-center lg:justify-end flex-shrink-0">
+          <button
+            onClick={() => setIsModalOpen(true)}
+            className="px-4 py-2 lg:px-3 lg:py-1.5 bg-blue-500 text-white rounded hover:bg-blue-600 whitespace-nowrap"
+          >
+            Update
+          </button>
+        </div>
       </div>
 
       {isModalOpen && (
-        <div className="fixed inset-0 bg-transparent flex items-center justify-center">
-          <div className="bg-white p-6 rounded-lg shadow-lg w-96">
+        <div className="fixed inset-0 bg-transparent flex items-center justify-center p-4">
+          <div className="bg-white p-6 rounded-lg shadow-lg w-full max-w-md sm:w-96">
             <div className="flex justify-between items-center mb-4">
               <h3 className="text-lg font-medium">Update Scores</h3>
               <Image

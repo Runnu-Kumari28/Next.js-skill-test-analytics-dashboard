@@ -1,5 +1,6 @@
 import Header from '../components/Header';
 import Sidebar from '../components/Sidebar';
+import { SkillProvider } from '../context/SkillContext';
 import './globals.css';
 
 export const metadata = {
@@ -14,7 +15,9 @@ export default function RootLayout({ children }) {
         <Header />
         <div className="flex">
           <Sidebar />
-          <main className="flex-1 p-4">{children}</main>
+          <main className="flex-1 p-4">
+            <SkillProvider>{children}</SkillProvider>
+          </main>
         </div>
       </body>
     </html>

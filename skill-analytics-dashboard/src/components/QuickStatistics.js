@@ -1,10 +1,14 @@
 const QuickStatistics = ({ skill }) => {
-    return (
-      <div>
-        <h3>Quick Statistics (Placeholder)</h3>
-        <p>Rank: {skill.rank}</p>
+  return (
+    <div className="p-4 border rounded-lg shadow-sm bg-white">
+      <h3 className="text-lg font-medium">Quick Statistics</h3>
+      <div className="space-y-2 mt-2">
+        <p><strong>Rank:</strong> {skill.rank}</p>
+        <p><strong>Percentile:</strong> {skill.percentile}%</p>
+        <p><strong>Correct Answers:</strong> {skill.correctAnswers}/{skill.totalQuestions}</p>
       </div>
-    );
-  };
-  
-  export default QuickStatistics;
+    </div>
+  );
+};
+
+export default QuickStatistics;
